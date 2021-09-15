@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  jmx:
+    enabled: true
+  application:
+    name: goku-ecommerce
+  data:
+    mongodb:
+      uri: mongodb://mongodb:27017/goku
+management:
+  endpoints:
+    web:
+      base-path: /
+      path-mapping:
+        health: health
+  endpoint:
+    health:
+      show-details: "ALWAYS"
