@@ -7,17 +7,9 @@
 		<groupId>br.com.abasteceai</groupId>
 		<version>0.0.1</version>
 	</parent>
-	<artifactId>address</artifactId>
+	<artifactId>common</artifactId>
 	<version>0.0.1</version>
-	<name>address</name>
-	<description>Microserviço com operações de endereço</description>
-
-	<dependencies>
-		<dependency>
-			<artifactId>common</artifactId>
-			<groupId>br.com.abasteceai</groupId>
-			<version>0.0.1</version>
-		</dependency>
-	</dependencies>
+	<name>common</name>
+	<description>Modulo com classes comuns</description>
 
 </project>

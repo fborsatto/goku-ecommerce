@@ -21,6 +21,11 @@
             <groupId>br.com.abasteceai</groupId>
             <version>0.0.1</version>
         </dependency>
+        <dependency>
+            <artifactId>common</artifactId>
+            <groupId>br.com.abasteceai</groupId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
