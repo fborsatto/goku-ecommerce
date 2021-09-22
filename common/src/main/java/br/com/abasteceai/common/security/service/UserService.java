@@ -1,5 +1,8 @@
-package br.com.abasteceai.common.security;
+package br.com.abasteceai.common.security.service;
 
+import br.com.abasteceai.common.security.repository.UserRepository;
+import br.com.abasteceai.common.security.model.Roles;
+import br.com.abasteceai.common.security.model.User;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -28,7 +31,7 @@ public class UserService implements UserDetailsService {
         User user = new User();
         user.setLogin("user");
         user.setPassword(passwordEncoder.encode("user"));
-        user.getRoles().add(Roles.DETONATOR_ROLE);
+        user.getRoles().add(Roles.ADMIN_ROLE);
         userRepository.save(user);
     }
 

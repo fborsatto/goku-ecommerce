@@ -1,4 +1,4 @@
-package br.com.abasteceai.common.security;
+package br.com.abasteceai.common.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

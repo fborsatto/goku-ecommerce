@@ -1,5 +1,6 @@
-package br.com.abasteceai.common.security;
+package br.com.abasteceai.common.security.config;
 
+import br.com.abasteceai.common.security.model.LoginRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;

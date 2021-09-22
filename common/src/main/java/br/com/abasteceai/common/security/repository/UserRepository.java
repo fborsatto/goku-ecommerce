@@ -1,5 +1,6 @@
-package br.com.abasteceai.common.security;
+package br.com.abasteceai.common.security.repository;
 
+import br.com.abasteceai.common.security.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

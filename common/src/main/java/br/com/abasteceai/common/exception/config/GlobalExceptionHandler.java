@@ -1,18 +1,20 @@
-package br.com.abasteceai.common.config;
+package br.com.abasteceai.common.exception.config;
 
-import br.com.abasteceai.common.exception.BadRequestException;
-import br.com.abasteceai.common.exception.ConflictException;
-import br.com.abasteceai.common.exception.NotFoundException;
+import br.com.abasteceai.common.exception.model.BadRequestException;
+import br.com.abasteceai.common.exception.model.ConflictException;
+import br.com.abasteceai.common.exception.model.NotFoundException;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import javax.validation.ConstraintViolationException;
 import javax.validation.ValidationException;
 import java.sql.SQLException;
 
@@ -85,5 +87,11 @@ public class GlobalExceptionHandler {
         log.error("Unexpected error: ", ex);
 
         return new ExceptionWrapper(INTERNAL_SERVER_ERROR, ex.getMessage());
+    }
+
+    @ExceptionHandler(MissingServletRequestParameterException.class)
+    @ResponseStatus(BAD_REQUEST)
+    public ExceptionWrapper handleException(MissingServletRequestParameterException ex) {
+        return new ExceptionWrapper(BAD_REQUEST, ex.getMessage());
     }
 }

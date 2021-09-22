@@ -1,4 +1,4 @@
-package br.com.abasteceai.common.exception;
+package br.com.abasteceai.common.exception.model;
 
 public class ConflictException extends RuntimeException{
     public ConflictException(String message) {

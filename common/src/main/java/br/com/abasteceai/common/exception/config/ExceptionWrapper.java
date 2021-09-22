@@ -1,4 +1,4 @@
-package br.com.abasteceai.common.config;
+package br.com.abasteceai.common.exception.config;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;

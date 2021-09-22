@@ -1,4 +1,4 @@
-package br.com.abasteceai.common.security;
+package br.com.abasteceai.common.security.model;
 
 import lombok.Data;
 

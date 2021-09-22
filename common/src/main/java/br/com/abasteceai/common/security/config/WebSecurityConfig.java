@@ -1,5 +1,7 @@
-package br.com.abasteceai.common.security;
+package br.com.abasteceai.common.security.config;
 
+import br.com.abasteceai.common.security.model.User;
+import br.com.abasteceai.common.security.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +25,6 @@ import java.io.IOException;
 
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
 
     private final UserService userService;
     private final ObjectMapper objectMapper;
@@ -97,7 +98,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             AuthenticationException e) throws IOException {
 
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
-        objectMapper.writeValue(response.getWriter(), "Nopity nop!");
+        objectMapper.writeValue(response.getWriter(), "Login failed!");
     }
 
     private void logoutSuccessHandler(
@@ -106,6 +107,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             Authentication authentication) throws IOException {
 
         response.setStatus(HttpStatus.OK.value());
-        objectMapper.writeValue(response.getWriter(), "Bye!");
+        objectMapper.writeValue(response.getWriter(), "Logout successfull!");
     }
 }

@@ -18,3 +18,7 @@ management:
   endpoint:
     health:
       show-details: "ALWAYS"
+logging:
+  level:
+    org.springframework.cache: DEBUG
+    br.com.abasteceai.*: DEBUG
