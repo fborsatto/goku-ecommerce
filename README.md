@@ -12,7 +12,7 @@ Passos para rodar:
 
    2.3 - java -jar target/*.jar
 
-A documentação das api se encontra endereços:
+A documentação das api se encontra no endereço:
 
 API de endereço -> http://localhost:8081/swagger-ui.html#/
 
