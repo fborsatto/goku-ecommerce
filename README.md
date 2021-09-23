@@ -2,24 +2,26 @@
 
 Passos para rodar:
 
-1. Clonar o repositório: https://github.com/fborsatto/portobello.git
+1. Clonar o repositório: https://github.com/fborsatto/goku-ecommerce.git
 
 2. Na raiz do projeto rodar:
 
    2.1 - mvn clean install
    
    2.2 - docker-compose up --build
-   
-A documentação das api's se encontram nesses endereços:
 
-API operações de pessoa -> http://localhost:8081/swagger-ui.html#/
+   2.3 - java -jar target/*.jar
 
-API operações de conta ->http://localhost:8082/swagger-ui.html#/
+A documentação das api se encontra endereços:
 
-API operações de limite ->http://localhost:8083/swagger-ui.html#/
+API de endereço -> http://localhost:8081/swagger-ui.html#/
 
-API operações de cartão ->http://localhost:8084/swagger-ui.html#/
+Para consumir a API é preciso antes fazer a chamada de login:
 
-
-LOGS da aplicação em:
-http://localhost:5601/
+curl --location --request POST 'localhost:8081/login' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=D93898CBF323281C9C7E7AFD46041E32' \
+--data-raw '{
+"login" : "user",
+"password" : "user"
+}'
