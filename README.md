@@ -20,7 +20,6 @@ Para consumir a API é preciso antes fazer a chamada de login:
 
 curl --location --request POST 'localhost:8081/login' \
 --header 'Content-Type: application/json' \
---header 'Cookie: JSESSIONID=D93898CBF323281C9C7E7AFD46041E32' \
 --data-raw '{
 "login" : "user",
 "password" : "user"
